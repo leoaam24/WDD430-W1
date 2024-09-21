@@ -6,12 +6,8 @@ export function NewTodoForm({ onSubmit }) {
     function handleSubmit(e) {
         e.preventDefault()
         if (newItem === "") return
-
         onSubmit(newItem)
-
-        setNewItem("")
       }
-
     return (
     <form onSubmit={handleSubmit} className="new-item-form">
     <div className="form-row">

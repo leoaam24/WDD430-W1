@@ -1,18 +1,19 @@
 import { TodoItem } from "./TodoItem"
 
 export function TodoList({ todos, toggleTodo, deleteTodo }) {
-   return (
+    console.log(todos)
+    return (
     <ul className="list">
     {todos.length=== 0 && "No To Dos"}
-  {todos.map(todo => {
+    {todos.map(todo => {
     return (
-        <TodoItem 
-        {...todo}
+    <TodoItem {...todo}
         key={todo.id}
         toggleTodo={toggleTodo}
         deleteTodo={deleteTodo}/>
     )
   })}
   </ul>
+  
 )
 }

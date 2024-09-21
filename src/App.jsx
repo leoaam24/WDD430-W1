@@ -19,7 +19,6 @@ export default function App() {
     setTodos(currentTodos => {
       return[...currentTodos, { id: crypto.randomUUID(), title, completed: false,}]
     })
-    setNewItem("")
   }
 
 
@@ -37,7 +36,7 @@ export default function App() {
 
   function deleteTodo(id) {
     setTodos(currentTodos => {
-      return currentTodos.filter(todo => {todo.id !== id})
+      return currentTodos.filter(todo => todo.id !== id)
     })
   }
   return (
