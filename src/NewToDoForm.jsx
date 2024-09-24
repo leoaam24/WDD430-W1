@@ -7,6 +7,7 @@ export function NewTodoForm({ onSubmit }) {
         e.preventDefault()
         if (newItem === "") return
         onSubmit(newItem)
+        setNewItem("")
       }
     return (
     <form onSubmit={handleSubmit} className="new-item-form">
